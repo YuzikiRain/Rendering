@@ -21,7 +21,7 @@
 
 ## Unity中的LODGroup组件
 
-[统一 - 手册：LOD 组 (unity3d.com)](https://docs.unity3d.com/Manual/class-LODGroup.html)
+[Unity - Manual: LOD Group (unity3d.com)](https://docs.unity3d.com/Manual/class-LODGroup.html)
 
 ## Unity shader中的LOD
 
@@ -30,6 +30,18 @@
 注意LOD的数值不要随意定，一些自带shader是有LOD值的，因此自定义shader的LOD应该参考这些值。
 
 必须按LOD降序放置子着色器。因为 Unity 会选择它找到的第一个有效的子着色器，因此如果它首先找到一个具有较低 LOD 的子着色器，它将始终使用该着色器。
+
+### 设置LOD
+
+``` c#
+Shader shader;
+// 设置shader的LOD
+shader.maximumLOD = 100;
+// 设置全局LOD
+Shader.globalMaximumLO = 200;
+```
+
+### shader
 
 ``` glsl
 Shader "LODTest" 
