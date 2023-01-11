@@ -28,12 +28,16 @@
 
 原理和shadowmap、延迟渲染类似，从深度图中对每一个像素使用**球**去近似计算，在球内使用多个随机位置进行采样。将采样点的深度（NDC空间下的z）与对应深度图中的深度（NDC空间的范围为$[-1,1]$的xy分量转为范围为$[0,1]$的uv再进行采样），如果深度更大（距离相机越远），说明被挡住了，计入该像素的AO贡献度。
 
-![image-20230104114203556](https://fastly.jsdelivr.net/gh/YuzikiRain/ImageBed/img/image-20230104114203556.png)
+<img src="https://fastly.jsdelivr.net/gh/YuzikiRain/ImageBed/img/image-20230104114203556.png" style="zoom:50%" />
 
-### HBAO（Horizon based ambient occlusion）
+### HBAO (Horizon-Based Ambient Occlusion)
 
 SSAO的缺点：如果球半径足够小，理论上应该会有超过一半的采样点是一定会遮挡住的，这些点就是物体内部的点（法线反方向）。因此要减去0.5才是最终结果。这些点的计算实际上是不必要的。
 
 HBAO就是在SSAO的基础上的一种改良：只计算法线方向那边的**半球**而不是整个球。
 
 额外使用了屏幕空间法线信息。
+
+### TSSAO (Temporal SSAO)
+
+### SSDO (Screen Space Directional Occlusion)
