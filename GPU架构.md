@@ -1,0 +1,5 @@
+- [GPU 渲染管线和硬件架构浅谈 - 腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/2016951)
+- [移动平台GPU硬件学习与理解 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/347001411)
+- [为什么显卡频率并没有中央处理器高，但图形化能力却那么强？ - 洛城的回答 - 知乎](https://www.zhihu.com/question/383560832/answer/1117922526)
+- [深入GPU硬件架构及运行机制 - 0向往0 - 博客园 (cnblogs.com)](https://www.cnblogs.com/timlly/p/11471507.html)
+- [GPU Framebuffer Memory: Understanding Tiling | Samsung Developers](https://developer.samsung.com/galaxy-gamedev/resources/articles/gpu-framebuffer.html)
