@@ -115,6 +115,8 @@ TBR是目前主流移动GPU的渲染架构，对应一般PC上的GPU架构则为
 - TBR：VS - Defer - RS - PS 
 - TBDR：VS - Defer1 - RS - Defer2 - PS
 
+//RS=光栅化  PS=片元shader
+
 defer1：延后图元的光栅化处理，所有的图元都生成后，才能开始划分tile所包含的图元。
 
 defer2：延后（Defer）PS的执行，先进行各种剔除（Power的HSR、Mali的Forward Pixel Killing等），以避免执行不必要的PS计算与相关资源调用的带宽开销
